@@ -2,9 +2,10 @@ from tic_tac_toe import TicTacToeGame
 
 def play():
   game = TicTacToeGame()
-
-  while not game.is_over():
-    game.play()
+  termino = False
+  while not termino:
+    game.play() 
+    termino = game.is_over()
     game.print()
 
   game.print_result()
